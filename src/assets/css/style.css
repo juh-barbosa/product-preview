@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Gloock';
+    src: url('../fonts/Gloock/Gloock-Regular.ttf');
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 100vw;
+}
+
+.section{
+    display: flex;
+    width: 45%;
+    height: 70%;
+}
+
+.section__information{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 1.5rem;
+    background-color: #FFF;
+    width: calc(100%-3rem);
+    border-radius: 0 1rem 1rem 0;
+}
+
+.section__information-subtitle, .section__information-paragraph{
+    font-family: 'Rubik';
+    text-transform: uppercase;
+    color: rgb(95, 93, 93);
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.section__information-title, .section__information-price{
+    font-family: 'Gloock';
+    font-size: 3rem;
+}
+
+.section__information-paragraph{
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.section__information-price{
+    color: rgb(32, 130, 108);
+    font-size: 2rem;
+    height: 1rem;
+}
+
+.section__information-divprice{
+    display: flex;
+    align-content: center;
+}
+
+.section__information-pricebefore{
+    height: 1rem;
+    font-size: 0.8rem;
+    color: rgb(95, 93, 93);
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.section__information-button{
+    background-color: rgb(32, 130, 108);
+    border: none;
+    border-width: 0;
+    height: 2.5rem;
+    font-family: 'Rubik';
+    font-weight: 600;
+    color: #FFF;
+    border-radius: 0.5rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    display:flex; 
+    align-items: center;
+    flex-direction: column-reverse;
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 5rem 0.6rem; 
+}
+
+.section__information-button:hover{
+    background-color: rgb(18, 73, 61);
+}
+
+.section__information-buttoncart{
+    padding: 0.5rem 1rem 0 0;
+}
+
+.section__img{
+    border-radius: 1rem 0 0 1rem;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+@media screen and (min-width:1024px) {
+    .section__information {
+        margin-left: -5rem;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .section__information {
+        margin-left: -5rem;
+    }
+    .section__information-title{
+        font-size: 2rem;
+    }
+    .section__information-paragraph{
+        font-size: 0.8rem;
+    }
+    .section__information-button{
+        background-position: 1.5rem 0.5rem; 
+    }
+}
