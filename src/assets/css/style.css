@@ -19,7 +19,7 @@ main{
 
 .section{
     display: flex;
-    width: 45%;
+    width: 35%;
     height: 70%;
 }
 
@@ -44,7 +44,7 @@ main{
 
 .section__information-title, .section__information-price{
     font-family: 'Gloock';
-    font-size: 3rem;
+    font-size: 2.1rem;
 }
 
 .section__information-paragraph{
@@ -89,7 +89,7 @@ main{
     flex-direction: column-reverse;
     background-image: url("../img/icon-cart.svg");
     background-repeat: no-repeat;
-    background-position: 5rem 0.6rem; 
+    background-position: 2rem 0.6rem; 
 }
 
 .section__information-button:hover{
@@ -111,11 +111,21 @@ main{
 @media screen and (min-width:1024px) {
     .section__information {
         margin-left: -5rem;
+        width: 130%
     }
 
+    .section__img{
+        width: 85%;
+    }
+
+    .section__information-button{
+        background-position: 0.9rem 0.5rem; 
+    }
+    
 }
 
-@media screen and (min-width:768px) {
+@media screen and (max-width:768px) {
+   
     .section__information {
         margin-left: -5rem;
     }
@@ -126,6 +136,49 @@ main{
         font-size: 0.8rem;
     }
     .section__information-button{
-        background-position: 1.5rem 0.5rem; 
+        background-position: 1rem 0.5rem; 
+    }
+
+    .section__information-price{
+        width: 180%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    main{
+        width:100%;
+        height: 98vh;
+        /* display: flex; */
+    }
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        height: 100%;
+        margin-top: 1rem;
+    }
+
+    .section__img{
+        width: 170%;
+        height: 45%;
+        margin-left: -4.4rem;
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+    }
+    
+    .section__information{
+        width: 147%;
+        margin-left: -4.4rem;
+        border-radius: 0 0 1rem  1rem;
+        height: 50vh;
+    }
+
+    .section__information-title, .section__information-price{
+        font-weight: 600;
+    }
+
+    .section__information-button{
+        background-position: 5.5rem 0.5rem; 
     }
 }
